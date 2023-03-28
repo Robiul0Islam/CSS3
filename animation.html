@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes slide {
+            0%{
+                left: 0px;
+                top: 0px;
+                background-color: yellow;
+            }
+            25%{
+                left: 200px;
+                top: 100px;
+                background-color: blue;
+            }
+            50%{
+                left: 400px;
+                top: 10px;
+                background-color: red;
+            }
+            75%{
+                left: 600px;
+                top: 100px;
+                background-color:yellow;
+            }
+            100%{
+                left: 800px;
+                top: 10px;
+                background-color: aqua;
+            }
+        }
+        .ball{
+            background-color: red;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            position: absolute;
+        }
+        .stage{
+            height:200px;
+            background-color: green;
+            min-width: 800px;
+        }
+        .stage:hover .ball{
+            animation-name: slide;
+            animation-timing-function: ease;
+            animation-duration: 3s;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+    </style> 
+</head>
+<body>
+    <div class="stage">
+        <div class="ball">
+
+        </div>
+    </div>
+</body>
+</html>
